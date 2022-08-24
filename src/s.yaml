@@ -54,6 +54,8 @@ services:
             - ./target/dotnetcore2webapi.dll
         memorySize: 128
         timeout: 60
+        initializationTimeout: 20
+        initializer: "true"   #开启初始化回调
         environmentVariables:  #为dotnetcore2.1 运行时添加运行时环境
           PATH: /opt/dotnet2:/usr/local/bin/apache-maven/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/ruby/bin
       triggers:
